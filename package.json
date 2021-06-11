@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "mongoose": "^5.12.13"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "ecraft",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarmad-Akhlaq/e-craft.git"
+  },
+  "author": "sam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sarmad-Akhlaq/e-craft/issues"
+  },
+  "homepage": "https://github.com/Sarmad-Akhlaq/e-craft#readme",
+  "description": ""
 }
