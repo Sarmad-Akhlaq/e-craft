@@ -1,13 +1,13 @@
-const express = require("express");
+require("dotenv").config();
+const app = require("./app")
 const mongoose = require("mongoose")
-const mongoDB_Password = "TGPSWqfe09q99COJ";
+const Art = require("./models/artModel")
 
-mongoose.connect('mongodb+srv://SarmadAkhlaq:TGPSWqfe09q99COJ@cluster0.xic2w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}).then((con) => {
+const DB = process.env.MONGO_STRING.replace("<PASSWORD>", process.env.MONGODB_PASSWORD)
+mongoose.connect(DB, {useNewUrlParser: true, useUnifiedTopology: true}).then((con) => {
     console.log("connenct to mongoDB")
 })
 
-const app = express();
-
-app.listen(8000, () => {
+app.listen(process.env.PORT, () => {
     console.log("server running on port 8000")
 })
