@@ -21,7 +21,7 @@ const APIFeatures = require("../utility/commonUtility")
 exports.getArts = async (req,res) => {
     try {
         var {limit = 2} = req.query;
-        var query = new APIFeatures(Art, req.query).filter();
+        var query = new APIFeatures(Art, req.query).filter().sort().fieldLimitation().pagination();
         var arts = await query.get();
         
 
